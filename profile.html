@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Risk Assessment</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        background-color: #111;
+        position: relative;
+      }
+
+      /* Sidebar Styles */
+      .sidebar {
+        width: 200px;
+        background-color: #222;
+        padding: 20px;
+        height: 100vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .sidebar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .sidebar button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #444;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+
+      .sidebar button:hover {
+        background-color: #666;
+      }
+
+      /* Main Content Layout */
+      .main-content {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      /* Left Stack (Risk & Input) */
+      .left-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .dashboard,
+      .input-section,
+      .profile-section {
+        background-color: #205781;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 320px;
+      }
+
+      .dashboard h1,
+      .input-section h2,
+      .profile-section h2 {
+        color: white;
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+
+      .risk-score {
+        font-size: 36px;
+        font-weight: bold;
+        color: #111;
+      }
+
+      /* Input Section */
+      .input-section label {
+        display: block;
+        font-weight: bold;
+        margin: 10px 0 5px;
+        color: white;
+        text-align: left;
+      }
+
+      .input-section input,
+      .input-section select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: white;
+        font-size: 14px;
+        color: black;
+      }
+
+      /* Button Styles */
+      .btn {
+        background-color: #3498db;
+        color: white;
+        padding: 12px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 10px;
+        margin-top: 15px;
+        width: 100%;
+        font-weight: bold;
+      }
+
+      .btn:hover {
+        background-color: #2980b9;
+      }
+
+      /* Profile Section */
+      .profile-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .profile-pic-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      #profile-pic {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ccc;
+      }
+
+      #upload-pic {
+        margin-top: 10px;
+      }
+
+      .details-container {
+        width: 100%;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-bottom: 10px;
+      }
+
+      .input-group label {
+        font-weight: bold;
+        color: white;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Real-Time Risk Assessment</h2>
+      <button onclick="location.href='index.html'">Home</button>
+      <button>Dashcam</button>
+      <button>Weather</button>
+      <button>Risk</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Left Stack (Risk Score + Input) -->
+      <div class="left-stack">
+        <div class="dashboard">
+          <h1>AI-Powered Accident Risk Assessment</h1>
+          <div class="risk-card">
+            <h2>Risk Score</h2>
+            <div class="risk-score">0.88</div>
+          </div>
+        </div>
+        <div class="input-section">
+          <h2>Enter Details</h2>
+          <label>Vehicle Number:</label>
+          <input type="text" placeholder="Enter vehicle number" />
+          <label>Time Range:</label>
+          <input type="text" placeholder="Select time range" />
+          <label>Vehicle Details</label>
+          <select>
+            <option>Car</option>
+            <option>Bike</option>
+            <option>Truck</option>
+          </select>
+          <button class="btn">Update Profile</button>
+        </div>
+      </div>
+
+      <!-- Profile Section (Next to Stack) -->
+      <div class="profile-section">
+        <div class="profile-pic-container">
+          <img
+            id="profile-pic"
+            src="https://www.shutterstock.com/image-vector/cute-robot-waving-hand-cartoon-600nw-1917055787.jpg"
+            alt="Profile Picture"
+          />
+          <input type="file" id="upload-pic" accept="image/*" />
+        </div>
+        <div class="details-container">
+          <h2>Personal Details</h2>
+          <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" />
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" />
+          </div>
+          <button class="btn">Save Details</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

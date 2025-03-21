@@ -1,0 +1,168 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background-color: #222;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  background-color: #444;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.sidebar button:hover {
+  background-color: #666;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #00aaff;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-buttons button {
+  background-color: #0099ff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-buttons button:hover {
+  background-color: #007acc;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px 0;
+}
+
+/* Set image grid layout */
+.grid-item {
+  background-color: #222;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Arrange Images in Order */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 15px;
+}
+
+.grid-item:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+} /* Traffic AI */
+.grid-item:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+} /* Car AI */
+.grid-item:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+} /* Speedometer */
+.grid-item:nth-child(4) {
+  grid-column: 1;
+  grid-row: 2;
+} /* AI */
+.grid-item:nth-child(5) {
+  grid-column: 2;
+  grid-row: 2;
+} /* Live Dashcam */
+.grid-item:nth-child(6) {
+  grid-column: 3;
+  grid-row: 2;
+} /* Traffic Density */
+.grid-item:nth-child(7) {
+  grid-column: 1;
+  grid-row: 3;
+} /* Data Chart */
+.grid-item:nth-child(8) {
+  grid-column: 2;
+  grid-row: 3;
+} /* Weather Score */
+.grid-item:nth-child(9) {
+  grid-column: 3;
+  grid-row: 3;
+} /* Risk Score */
+
+/* Footer Buttons */
+.footer-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.footer-buttons button {
+  background-color: #0099ff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.footer-buttons button:hover {
+  background-color: #007acc;
+}
