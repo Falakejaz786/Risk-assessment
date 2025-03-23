@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Statistics</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #000;
+        color: white;
+        text-align: center;
+      }
+      .container {
+        padding: 20px;
+      }
+      .header {
+        background-color: #003366;
+        padding: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        color: yellow;
+      }
+      .section {
+        background-color: #00509e;
+        margin: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+      }
+      .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        background-color: #002244;
+        padding: 10px 0;
+      }
+      .bottom-nav button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .bottom-nav button.active {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">Weather Statistics</div>
+    <div class="container">
+      <div class="section">
+        <h2>Road Risk Predictions</h2>
+        <p>Safe Braking Distance: <b>187.42 m</b></p>
+        <p>Safe Driving Speed: <b>55.78 km/h</b></p>
+        <p>Visibility Percentage: <b>35.00%</b></p>
+        <p>Vehicle Heating: <b>-213.03%</b></p>
+      </div>
+      <div class="section">
+        <h2>Weather Conditions</h2>
+        <p>Temperature: <b>26.09°C</b></p>
+        <p>Humidity: <b>65.00%</b></p>
+        <p>Rain Volume: <b>0.00 mm</b></p>
+        <p>Wind Speed: <b>3.09 m/s</b></p>
+        <p>Visibility: <b>3500.00 m</b></p>
+      </div>
+    </div>
+    <div class="bottom-nav">
+      <button onclick="location.href='index.html'">Home</button>
+      <button onclick="location.href='dashcam.html'">Dashcam</button>
+      <button onclick="location.href='profile.html'">Profile</button>
+    </div>
+  </body>
+</html>
